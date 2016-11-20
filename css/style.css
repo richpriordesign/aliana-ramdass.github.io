@@ -224,7 +224,7 @@ li{
     
 }
 
-p.drawer{
+a.drawer{
     margin-top:15px;
     margin-left:10px;
     cursor:pointer;
@@ -236,7 +236,7 @@ p.drawer{
     -o-transition-duration:.3s;
 }
 
-.drawer p{
+.drawer a{
     
     position:absolute;
     top:0;
@@ -917,7 +917,7 @@ a li:hover{
     display:none;
 }
 
-p.drawer{
+a.drawer{
     display:none;
 }
 

@@ -9,7 +9,7 @@ html{
 html,
 body{
     height:100%;
-    background-color:#FFF;
+    /*background-color:#FFF;*/
     color:#000;
     font-family:'PT Sans', "Arial", "Helvetica", sans-serif;
     font-size:12px;
@@ -122,7 +122,7 @@ body{
 }
 
 #top{
-    padding-top:4rem;
+    padding-top:6rem;
 }
 
 .x-space{
@@ -208,9 +208,9 @@ li{
 }
 
 .mobile-nav{
-    width:260px;
+    width:245px;
     min-height:100%;
-    left:-260px;
+    left:-245px;
     /*padding:25px 25px 0px 25px;*/
     background-color:#beb5ac;
     display:block;
@@ -267,7 +267,7 @@ p.drawer{
 }
 
 .slide-over{
-    padding-left:260px;
+    padding-left:242px;
     transition-duration:.3s;
     -webkit-transition-duration:.3s;
     -moz-transition-duration:.3s;
@@ -388,12 +388,56 @@ img{
 
 /**** LANDING PAGE ****/
 
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-cover{
+    width:100%;
+    max-height:85%;
+    min-height:230px;
+    overflow:hidden;
+    background-size:cover;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-color:#DDD;
+    padding-bottom:0px;
+    z-index:1;
+}
+
+.home-div{
+    width:100%;
+    position:fixed;
+    z-index:-100;
+}
+
+video{
+    display:none;
+    /*width:100%;*/
+}
+
 #landing{
     /*EXPERIMENTAL*/
-    margin:0 auto;
+    /*margin:0 auto;*/
     height:100%;
     display:table;
-    background-color:#FFF;
+    z-index:2;
+    /*background-color:#FFF;*/
 }
 
 .landing-hero{
@@ -407,6 +451,8 @@ img{
     color:#beb5ac;
     font-size:1rem;
 }
+
+
 
 .portfolio{
     /*EXPERIMENTAL*/
@@ -527,6 +573,7 @@ img{
     width:100%;
     height:250px;
     display:table;
+    background-color:#FFF;
 }
 
 .contact-area{
@@ -588,11 +635,6 @@ img{
     font-size:1rem;
 }
 
-.gal-link{
-    display:inline-block;
-}
-
-
 /**** PORTFOLIO PAGES ****/
 
 .portfolio-headline{
@@ -622,8 +664,8 @@ img{
 
 }
 
-.bottom-nav a:last-of-type{
-    /*text-align:right;*/
+.footer-link:first-of-type{
+    padding-bottom:0rem;
 }
 
 .footer-link{
@@ -718,8 +760,13 @@ li{
 }
 
 .navbar{
-    background-color:#FFF;
-    background-color:rgba(255,255,255,.3);
+   /* background-color:#FFF;
+    background-color:rgba(255,255,255,.3);*/
+}
+
+/**** LANDING ****/
+video{
+    display:inline;
 }
 
 /**** ABOUT ***/
@@ -741,25 +788,6 @@ li{
 .about-img{
     display:none;
 }
-/*.about-section{
-    width:100%;
-    height:100%;
-    background-color:#FFF;
-    left:0;
-    display:table;
-
-}
-
-.about-header{
-    width:100%;
-    height:40%;
-    background-color:#000;
-    left:0;
-    display:table;
-    position:relative;
-
-}
-*/
 
 .contact-section{
     width:100%;
@@ -823,6 +851,10 @@ iframe{
     text-align:center;
 }
 
+.footer-link:first-of-type{
+    padding-bottom:0rem;
+}
+
 }
 
 /**** LARGE TABLET ****/
@@ -881,6 +913,10 @@ iframe{
 
 }
 
+video{
+    display:inline;
+}
+
 /**** NAVIGATION ****/
 li{
     list-style:none;
@@ -923,8 +959,8 @@ p.drawer{
 
 .navbar{
     text-align:right;
-    background-color:#FFF;
-    background-color:rgba(255,255,255,.3);
+    /*background-color:#FFF;
+    background-color:rgba(255,255,255,.3);*/
 }
 
 .nav-logo{
@@ -1011,23 +1047,6 @@ p.drawer{
     display:block;
 }
 
-/*.about-section{
-    width:50%;
-    height:100%;
-    background-color:#FFF;
-    left:50%;
-    display:table;
-    position:absolute;
-}
-
-.about-header{
-    width:50%;
-    height:100%;
-    background-color:#000;
-    right:50%;
-    display:table;
-    position:absolute;
-}*/
 
 .contact-section{
     width:50%;
@@ -1042,6 +1061,7 @@ p.drawer{
     width:100%;
     height:250px;
     display:table;
+    background-color:#FFF;
 }
 
 .contact-area{
@@ -1067,6 +1087,10 @@ p.drawer{
     height:100%;
 }
 
+.footer-link:first-of-type{
+    padding-bottom:inherit;
+}
+
 }
 
 /**** DESKTOP ****/
@@ -1089,4 +1113,20 @@ h2{
     position:relative;
 }
 
+}
+
+@media all and (min-width:1290px){
+    video{
+        width:100%;
+    }
+}
+
+@media (min-width:1024px) and (max-height:570px){
+    .logo-img{
+        max-width:200px;
+    }
+
+    #landing{
+        margin:0 auto;
+    }
 }
